@@ -19,3 +19,11 @@ Remove all elements in collection that satisfy the predicate condition
 ```java
 CollectionUtil.removeIf(collection, a -> a > 5);
 ```
+
+## JSON Utilities
+
+Check if two JSON Objects are equal. Works on org.json.JSONObject or a JSON String
+```java
+JSON.areEqual(json1, json2)
+```
+Implementation does a deep check within the JSON. Checks for nested JSON's, arrays, JSON within arrays. Function will return true only if the JSONs are exactly the same. The keys don't have to be in the same order for the two JSON's to be equal. Array elements have to be in same order for the JSON's to be equal. 
