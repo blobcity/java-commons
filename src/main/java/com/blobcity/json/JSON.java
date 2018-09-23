@@ -16,6 +16,12 @@ public class JSON {
     }
 
     public static boolean areEqual(final JSONObject json1, final JSONObject json2) {
+        if(json1 == null && json2 == null) {
+            return true;
+        } else if(json1 == null || json2 == null) {
+            return false;
+        }
+
         for(String key : json1.keySet()) {
             if(!json2.has(key)) {
                 return false;
